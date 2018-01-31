@@ -32,13 +32,13 @@
 
     d = {}
     for i in list:
-        d[i] += d.get(i, 0) + 1
+        d[i] = d.get(i, 0) + 1
 替换为
     
     d = {}
     get = d.get
     for i in list:
-        d[i] += get(i, 0) + 1
+        d[i] = get(i, 0) + 1
     
 
 
