@@ -1,0 +1,1 @@
+docker pull postgresql:10.1
