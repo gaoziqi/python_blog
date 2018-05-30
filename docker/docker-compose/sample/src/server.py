@@ -1,6 +1,7 @@
 import tornado.ioloop
 import tornado.web
 import psycopg2
+from tornado.options import parse_command_line
 
 class GetHandler(tornado.web.RequestHandler):
 
@@ -49,6 +50,7 @@ class Application(tornado.web.Application):
 
 
 if __name__ == '__main__':
+    parse_command_line()
     app = Application()
     app.listen(13017)
     tornado.ioloop.IOLoop.instance().start()
