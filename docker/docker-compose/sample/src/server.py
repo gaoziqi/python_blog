@@ -6,8 +6,8 @@ class GetHandler(tornado.web.RequestHandler):
 
     def get(self):
         key = self.get_argument('key')
-        self.cu.execute(f'SELECT v FROM test WHERE k = {key}')
-        res = self.cu.fetchone()
+        self.application.cu.execute(f'SELECT v FROM test WHERE k = {key}')
+        res = self.application.cu.fetchone()
         self.write(res[0] if res else '不存在')
 
 
@@ -16,13 +16,13 @@ class SetHandler(tornado.web.RequestHandler):
     def get(self):
         key = self.get_argument('key')
         value = self.get_argument('value')
-        self.cu.execute(f'SELECT v FROM test WHERE k = {key}')
-        res = self.cu.fetchone()
+        self.application.cu.execute(f'SELECT v FROM test WHERE k = {key}')
+        res = self.application.cu.fetchone()
         if res:
-            self.cu.execute(f'UPDATE test SET v = {value} WHERE k = {key}')
+            self.application.cu.execute(f'UPDATE test SET v = {value} WHERE k = {key}')
         else:
-            self.cu.execute(f'INSERT INTO test VALUES ({key}, {value})')
-        self.conn.commit()
+            self.application.cu.execute(f'INSERT INTO test VALUES ({key}, {value})')
+        self.application.conn.commit()
         self.write('完成')
 
 
