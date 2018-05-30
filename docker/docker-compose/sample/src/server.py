@@ -8,7 +8,7 @@ class GetHandler(tornado.web.RequestHandler):
         key = self.get_argument('key')
         self.application.cu.execute(f'SELECT v FROM test WHERE k = {key}')
         res = self.application.cu.fetchone()
-        self.write(res[0] if res else '不存在')
+        self.write(str(res[0]) if res else '不存在')
 
 
 class SetHandler(tornado.web.RequestHandler):
