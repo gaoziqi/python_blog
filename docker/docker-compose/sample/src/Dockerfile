@@ -9,9 +9,9 @@ WORKDIR /src
 # 清理virtual: apk del virtual-pkg-name
 RUN echo "http://mirrors.ustc.edu.cn/alpine/v3.7/main/" > /etc/apk/repositories && \
     apk update && \
-    apk add --update --no-cache --virtual build-deps gcc python-dev musl-dev && \
+    apk add --update --no-cache --virtual build-deps gcc musl-dev && \
     apk add --no-cache postgresql-dev && \
     pip3 install -r requirements.txt && \
-    apk del virtual-pkg-name
+    apk del build-deps gcc musl-dev
 
 CMD ["python3", "server.py"]
