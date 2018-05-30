@@ -9,7 +9,7 @@ class GetHandler(tornado.web.RequestHandler):
         self.cu.execute(f'SELECT v FROM test WHERE k = {key}')
         res = self.cu.fetchone()
         self.write(res[0] if res else '不存在')
-        self.finish()
+
 
 class SetHandler(tornado.web.RequestHandler):
 
@@ -24,14 +24,21 @@ class SetHandler(tornado.web.RequestHandler):
             self.cu.execute(f'INSERT INTO test VALUES ({key}, {value})')
         self.conn.commit()
         self.write('完成')
-        self.finish()
+
+
+class MainHandler(tornado.web.RequestHandler):
+
+    def get(self):
+        self.write('HELLO WORLD')
+
 
 class Application(tornado.web.Application):
 
     def __init__(self):
         handlers = [
-            (r'get', GetHandler),
-            (r'set', SetHandler)
+            (r'/get', GetHandler),
+            (r'/set', SetHandler),
+            (r'/', MainHandler)
         ]
         settings = {} #'static_path', 'static_url_prefix'
         self.conn = psycopg2.connect(database='postgres', user='postgres', password='postgres', host='db', port='5432')
