@@ -1,7 +1,13 @@
-docker search [镜像名]		#搜索镜像
-docker pull [镜像名]		#获取镜像
-docker image ls			#查看所有镜像
-docker run  [镜像名]		#启动容器
-docker ps -a			#查看所有容器
-docker stop [容器名]		#停止容器， 容器名可缩写
-docker rm   [容器名]		#删除容器
+https://www.cnblogs.com/neptunemoon/p/6512121.html
+
+docker search 	[镜像名]		#搜索镜像
+docker pull   	[镜像名]		#获取镜像
+docker image ls				#查看所有镜像
+docker run    	[镜像名]		#启动容器
+docker ps -a				#查看所有容器
+docker start  	[容器名]		#启动容器
+docker stop   	[容器名]		#停止容器， 容器名可缩写
+docker rm     	[容器名]		#删除容器
+
+
+docker exec -it [容器名] /bin/bash	#进入容器（进入后env查看局部变量）
