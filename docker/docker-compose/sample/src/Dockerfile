@@ -1,5 +1,5 @@
 # alpine3.7版本
-FROM python:3.6-alpine
+FROM python:3.6-alpine3.7
 ADD . /code
 WORKDIR /code
 
