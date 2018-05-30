@@ -6,6 +6,8 @@ services:
      - "13017:13017"
     volumes:
      - ../src :/src
+    depends_on:
+     - postgres
   postgres:
     image: "postgres:10.1"
     volumes:
