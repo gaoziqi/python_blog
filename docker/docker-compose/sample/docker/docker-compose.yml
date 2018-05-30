@@ -12,6 +12,8 @@ services:
     ports:
      - "13017:13017"
     volumes:
-     - ../src:/code
+     - ../src:/code #尽量不要让src不能跟code同名，有奇葩的bug
     links:
+     - db
+    depends_on:
      - db
