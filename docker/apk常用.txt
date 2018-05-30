@@ -1,0 +1,5 @@
+http://www.360doc.com/content/16/0915/08/31685732_591001620.shtml
+
+
+apk add --update --no-cache --virtual [°üÃû]
+apk del virtual-pkg-name
