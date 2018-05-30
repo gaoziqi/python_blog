@@ -1,7 +1,8 @@
 # alpine3.7版本
 FROM python:3.6-alpine
+ADD . /src
 WORKDIR /src
-ADD ../../src /src
+
 
 # 添加国内镜像源: echo "http://mirrors.ustc.edu.cn/alpine/v3.7/main/" > /etc/apk/repositories
 # 保留包: apk add --no-cache postgresql-dev
