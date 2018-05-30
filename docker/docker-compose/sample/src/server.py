@@ -42,5 +42,6 @@ class Application(tornado.web.Application):
 
 
 if __name__ == '__main__':
+    app = Application()
     app.listen(13017)
     tornado.ioloop.IOLoop.instance().start()
