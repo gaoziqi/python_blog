@@ -1,6 +1,6 @@
 version: '3'
 services:
-  postgres:
+  db:
     image: "postgres:10.1"
     volumes:
      - ../data:/var/lib/postgresql/data
@@ -11,5 +11,5 @@ services:
     build: ../src/
     ports:
      - "13017:13017"
-    depends_on:
-     - postgres
+    links:
+     - db

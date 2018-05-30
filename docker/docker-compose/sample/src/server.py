@@ -34,7 +34,7 @@ class Application(tornado.web.Application):
             (r'set', SetHandler)
         ]
         settings = {} #'static_path', 'static_url_prefix'
-        self.conn = psycopg2.connect(database='postgres', user='postgres', password='postgres', host='0.0.0.0', port='5432')
+        self.conn = psycopg2.connect(database='postgres', user='postgres', password='postgres', host='db', port='5432')
         self.cu = self.conn.cursor()
         self.cu.execute("CREATE TABLE test(k INT PRIMARY KEY, v INT)")
         self.conn.commit()
