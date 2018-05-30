@@ -1,5 +1,12 @@
 version: '3'
 services:
+  postgres:
+    image: "postgres:10.1"
+    volumes:
+     - ../data :/var/lib/postgresql/data
+    environment:    #设置环境变量
+     - POSTGRES_PASSWORD=postgres
+     - POSTGRES_USER=postgres
   web:
     build: ./web/
     ports:
@@ -8,10 +15,3 @@ services:
      - ../src :/src
     depends_on:
      - postgres
-  postgres:
-    image: "postgres:10.1"
-    volumes:
-     - ../data :/var/lib/postgresql/data
-    environment:    #设置环境变量
-     - POSTGRES_PASSWORD=postgres
-     - POSTGRES_USER=postgres
