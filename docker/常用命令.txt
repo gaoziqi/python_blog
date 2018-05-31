@@ -18,5 +18,16 @@ docker exec -it [容器名] /bin/bash	#进入容器（进入后env查看局部变量）
 
 sudo docker ps -a|grep Exited|awk '{print $1}'	#删除所有停止容器
 
-$ docker stop $(docker ps -a -q) //  stop停止所有容器
-$ docker  rm $(docker ps -a -q) //   remove删除所有容器
+
+$ docker stop $(docker ps -a -q) 				//  stop停止所有容器
+$ docker  rm $(docker ps -a -q) 				//   remove删除所有容器
+$ docker volume rm $(docker volume ls -qf dangling=true) 	//   remove删除所有不用的volume 
+
+
+
+###################
+docker-compose
+###################
+docker-compose up			#执行yaml
+docker-compose up -d			#后台执行yaml
+docker-compose up -d --build		#修改Dockfile后，重新生成并执行yaml
