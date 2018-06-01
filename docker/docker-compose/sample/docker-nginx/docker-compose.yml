@@ -18,10 +18,10 @@ services:
     #links: 即将被淘汰，换成networks
     # - db
     networks:
-      - new
       web_1:
         aliases:
           - host1
+      new:
     depends_on:
      - postgres
     logging:
@@ -34,10 +34,10 @@ services:
     volumes:
      - ../1/src:/code
     networks:
-      - new
       web_2:
         aliases:
           - host2
+      new:
     depends_on:
      - postgres
     logging:
@@ -50,10 +50,10 @@ services:
     volumes:
      - ../1/src:/code
     networks:
-      - new
       web_3:
         aliases:
           - host3
+      new:
     depends_on:
      - postgres
     logging:
@@ -64,9 +64,9 @@ services:
   nginx:
     image: "nginx:alpine"
     networks:  
-     - host1  
-     - host2  
-     - host3  
+     - web_1  
+     - web_2  
+     - web_3  
     ports:  
      - "13017:80"
     volumes:
