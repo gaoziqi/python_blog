@@ -1,0 +1,198 @@
+time="2018-05-30T16:31:48.178164612+08:00" level=warning msg="Error while setting daemon root propagation, this is not generally critical but may cause some functionality to not work or fallback to less desirable behavior" dir=/var/lib/docker error="error getting daemon root's parent mount: Could not find source mount of /var/lib/docker"
+time="2018-05-30T16:31:48.178339850+08:00" level=warning msg="[!] DON'T BIND ON ANY IP ADDRESS WITHOUT setting --tlsverify IF YOU DON'T KNOW WHAT YOU'RE DOING [!]"
+time="2018-05-30T16:31:48.178797967+08:00" level=info msg="libcontainerd: started new docker-containerd process" pid=31662
+time="2018-05-30T16:31:48+08:00" level=info msg="starting containerd" module=containerd revision=773c489c9c1b21a6d78b5c538cd395416ec50f88 version=v1.0.3 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.content.v1.content"..." module=containerd type=io.containerd.content.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.snapshotter.v1.btrfs"..." module=containerd type=io.containerd.snapshotter.v1 
+time="2018-05-30T16:31:48+08:00" level=warning msg="failed to load plugin io.containerd.snapshotter.v1.btrfs" error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.btrfs must be a btrfs filesystem to be used with the btrfs snapshotter" module=containerd 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.snapshotter.v1.overlayfs"..." module=containerd type=io.containerd.snapshotter.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.metadata.v1.bolt"..." module=containerd type=io.containerd.metadata.v1 
+time="2018-05-30T16:31:48+08:00" level=warning msg="could not use snapshotter btrfs in metadata plugin" error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.btrfs must be a btrfs filesystem to be used with the btrfs snapshotter" module="containerd/io.containerd.metadata.v1.bolt" 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.differ.v1.walking"..." module=containerd type=io.containerd.differ.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.gc.v1.scheduler"..." module=containerd type=io.containerd.gc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.containers"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.content"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.diff"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.events"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.healthcheck"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.images"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.leases"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.namespaces"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.snapshots"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.monitor.v1.cgroups"..." module=containerd type=io.containerd.monitor.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.runtime.v1.linux"..." module=containerd type=io.containerd.runtime.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.tasks"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.version"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg="loading plugin "io.containerd.grpc.v1.introspection"..." module=containerd type=io.containerd.grpc.v1 
+time="2018-05-30T16:31:48+08:00" level=info msg=serving... address="/var/run/docker/containerd/docker-containerd-debug.sock" module="containerd/debug" 
+time="2018-05-30T16:31:48+08:00" level=info msg=serving... address="/var/run/docker/containerd/docker-containerd.sock" module="containerd/grpc" 
+time="2018-05-30T16:31:48+08:00" level=info msg="containerd successfully booted in 0.002701s" module=containerd 
+time="2018-05-30T16:31:48.205064885+08:00" level=info msg="[graphdriver] using prior storage driver: overlay2"
+time="2018-05-30T16:31:48.213301819+08:00" level=info msg="Graph migration to content-addressability took 0.00 seconds"
+time="2018-05-30T16:31:48.213568727+08:00" level=warning msg="Your kernel does not support swap memory limit"
+time="2018-05-30T16:31:48.213601390+08:00" level=warning msg="Your kernel does not support cgroup rt period"
+time="2018-05-30T16:31:48.213610974+08:00" level=warning msg="Your kernel does not support cgroup rt runtime"
+time="2018-05-30T16:31:48.214509006+08:00" level=info msg="Loading containers: start."
+time="2018-05-30T16:31:48.393050570+08:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.18.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+time="2018-05-30T16:31:48.418133259+08:00" level=info msg="Loading containers: done."
+time="2018-05-30T16:31:48.427106357+08:00" level=info msg="Docker daemon" commit=f150324 graphdriver(s)=overlay2 version=18.05.0-ce
+time="2018-05-30T16:31:48.427157877+08:00" level=info msg="Daemon has completed initialization"
+time="2018-05-30T16:31:48.432571727+08:00" level=info msg="API listen on [::]:6934"
+time="2018-05-30T16:31:48.432615395+08:00" level=info msg="API listen on /var/run/docker.sock"
+time="2018-05-30T16:31:55.905774568+08:00" level=info msg="Got signal to reload configuration, reloading from: /etc/docker/daemon.json"
+time="2018-05-30T16:31:55.906380384+08:00" level=info msg="Reloaded configuration: {\"mtu\":1500,\"pidfile\":\"/var/run/docker.pid\",\"data-root\":\"/var/lib/docker\",\"exec-root\":\"/var/run/docker\",\"group\":\"docker\",\"deprecated-key-path\":\"/etc/docker/key.json\",\"max-concurrent-downloads\":3,\"max-concurrent-uploads\":5,\"shutdown-timeout\":15,\"hosts\":[\"unix:///var/run/docker.sock\",\"tcp://0.0.0.0:6934\"],\"log-level\":\"info\",\"swarm-default-advertise-addr\":\"\",\"swarm-raft-heartbeat-tick\":0,\"swarm-raft-election-tick\":0,\"metrics-addr\":\"\",\"log-driver\":\"json-file\",\"ip\":\"0.0.0.0\",\"icc\":true,\"iptables\":true,\"ip-forward\":true,\"ip-masq\":true,\"userland-proxy\":true,\"disable-legacy-registry\":true,\"experimental\":false,\"network-control-plane-mtu\":1500,\"runtimes\":{\"runc\":{\"path\":\"docker-runc\"}},\"default-runtime\":\"runc\",\"oom-score-adjust\":-500,\"default-shm-size\":67108864,\"default-ipc-mode\":\"shareable\"}"
+time="2018-05-30T16:32:19+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/8b34d5e98fe74e247b08b1bdea500466b29213c6009d14a23d94153ebfadc5e5/shim.sock" debug=false module="containerd/tasks" pid=31862 
+time="2018-05-30T16:32:21+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/a55d07336caef42dda56cdc0ed3d31c6a4245000c73fa3b939c1bf6fb4b2a830/shim.sock" debug=false module="containerd/tasks" pid=31985 
+time="2018-05-31T14:16:17.218074370+08:00" level=error msg="Error getting nodes: This node is not a swarm manager. Use \"docker swarm init\" or \"docker swarm join\" to connect this node to swarm and try again."
+time="2018-05-31T14:16:17.218159810+08:00" level=error msg="Handler for GET /nodes returned error: This node is not a swarm manager. Use \"docker swarm init\" or \"docker swarm join\" to connect this node to swarm and try again."
+time="2018-06-01T11:14:23.835539455+08:00" level=info msg="Layer sha256:175d7b7643a1989b728b91ff96538ba0c6378e11bcc7558af27e63f9d96b22c8 cleaned up"
+time="2018-06-01T11:14:23+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/8e48eed0de0af013a4914ff72fd00d2fee0a7b4de9e88fbae1c86283bbb54a83/shim.sock" debug=false module="containerd/tasks" pid=11328 
+time="2018-06-01T11:15:20+08:00" level=info msg="shim reaped" id=8e48eed0de0af013a4914ff72fd00d2fee0a7b4de9e88fbae1c86283bbb54a83 module="containerd/tasks" 
+time="2018-06-01T11:15:20.447383806+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T11:15:21.676077389+08:00" level=info msg="Layer sha256:13bd68c9c8b3404584a5478573725ee8d018021a5efdbc3804d810fb15712607 cleaned up"
+time="2018-06-01T11:15:21+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/002d63e667e882315253cce11733cfc53e08e4eeb6e5e6fd4586c6e67b1edf20/shim.sock" debug=false module="containerd/tasks" pid=11603 
+time="2018-06-01T11:15:32.036201878+08:00" level=info msg="Container a55d07336caef42dda56cdc0ed3d31c6a4245000c73fa3b939c1bf6fb4b2a830 failed to exit within 10 seconds of signal 15 - using the force"
+time="2018-06-01T11:15:32+08:00" level=info msg="shim reaped" id=a55d07336caef42dda56cdc0ed3d31c6a4245000c73fa3b939c1bf6fb4b2a830 module="containerd/tasks" 
+time="2018-06-01T11:15:32.120214093+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T11:15:32+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/1e6c03a1c8c3f1d0f0ff52101b02f92a4d127d069d5f3d92e36a9037f2688c19/shim.sock" debug=false module="containerd/tasks" pid=11781 
+time="2018-06-01T11:15:45+08:00" level=info msg="shim reaped" id=8b34d5e98fe74e247b08b1bdea500466b29213c6009d14a23d94153ebfadc5e5 module="containerd/tasks" 
+time="2018-06-01T11:15:45.373616922+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T11:51:23+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/9ca23fc0f3035f2492118de457e8dd016d500c5c3c9898b9659c8c3c26defcb6/shim.sock" debug=false module="containerd/tasks" pid=12196 
+time="2018-06-01T11:53:03+08:00" level=info msg="shim reaped" id=9ca23fc0f3035f2492118de457e8dd016d500c5c3c9898b9659c8c3c26defcb6 module="containerd/tasks" 
+time="2018-06-01T11:53:03.574741318+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T11:54:07+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/a7564999480192a3e04443982ae69f838b97cab6a43a321d231f1b68a23c8b4d/shim.sock" debug=false module="containerd/tasks" pid=12350 
+time="2018-06-01T11:54:41+08:00" level=info msg="shim reaped" id=a7564999480192a3e04443982ae69f838b97cab6a43a321d231f1b68a23c8b4d module="containerd/tasks" 
+time="2018-06-01T11:54:41.720433368+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T11:54:42.680707084+08:00" level=info msg="Layer sha256:78845c45e9b12b1c91673c8e6347f845b312eba41fc74ffccae55a46ccdea90e cleaned up"
+time="2018-06-01T11:56:10+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/d8efe18462852fac964d82d197e95e722d5d608dc1d2a2f13f47ca5c54c61135/shim.sock" debug=false module="containerd/tasks" pid=12653 
+time="2018-06-01T11:56:11+08:00" level=info msg="shim reaped" id=d8efe18462852fac964d82d197e95e722d5d608dc1d2a2f13f47ca5c54c61135 module="containerd/tasks" 
+time="2018-06-01T11:56:11.152570617+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T11:57:07.571473209+08:00" level=error msg="Handler for POST /v1.37/containers/create returned error: invalid volume specification: '.:/': invalid mount config for type \"volume\": invalid specification: destination can't be '/'"
+time="2018-06-01T13:04:01+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/1fc6cbced13584415642cea7023a6558868426d907bf3e83019cf96b46b13073/shim.sock" debug=false module="containerd/tasks" pid=13107 
+time="2018-06-01T13:04:01+08:00" level=info msg="shim reaped" id=1fc6cbced13584415642cea7023a6558868426d907bf3e83019cf96b46b13073 module="containerd/tasks" 
+time="2018-06-01T13:04:01.452424250+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T13:04:11.146268933+08:00" level=info msg="Layer sha256:78845c45e9b12b1c91673c8e6347f845b312eba41fc74ffccae55a46ccdea90e cleaned up"
+time="2018-06-01T13:05:16.999708128+08:00" level=info msg="Layer sha256:78845c45e9b12b1c91673c8e6347f845b312eba41fc74ffccae55a46ccdea90e cleaned up"
+time="2018-06-01T13:05:32+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/7c0da3d1382d947d8813e047288ab15320032c967ae971a33f36bc3620578e0d/shim.sock" debug=false module="containerd/tasks" pid=13291 
+time="2018-06-01T13:05:32+08:00" level=info msg="shim reaped" id=7c0da3d1382d947d8813e047288ab15320032c967ae971a33f36bc3620578e0d module="containerd/tasks" 
+time="2018-06-01T13:05:32.535387055+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T13:05:32.535423547+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T13:05:32.597884904+08:00" level=error msg="7c0da3d1382d947d8813e047288ab15320032c967ae971a33f36bc3620578e0d cleanup: failed to delete container from containerd: no such container"
+time="2018-06-01T13:05:37+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/4678bf875e764973cb6d38813398030393ec977c9eb54b21ccbdcdf0e9985429/shim.sock" debug=false module="containerd/tasks" pid=13367 
+time="2018-06-01T13:05:37+08:00" level=info msg="shim reaped" id=4678bf875e764973cb6d38813398030393ec977c9eb54b21ccbdcdf0e9985429 module="containerd/tasks" 
+time="2018-06-01T13:05:37.920775698+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T13:05:37.920812247+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T13:05:37.968151729+08:00" level=error msg="4678bf875e764973cb6d38813398030393ec977c9eb54b21ccbdcdf0e9985429 cleanup: failed to delete container from containerd: no such container"
+time="2018-06-01T13:05:57+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/f246650abe77848fc417a599ddcba34f0c99d916c75ea5509f5171ad5d668019/shim.sock" debug=false module="containerd/tasks" pid=13443 
+time="2018-06-01T13:05:58+08:00" level=info msg="shim reaped" id=f246650abe77848fc417a599ddcba34f0c99d916c75ea5509f5171ad5d668019 module="containerd/tasks" 
+time="2018-06-01T13:05:58.165216088+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T13:17:40+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/4138b598ad98f1117dd872f7c9276b6fac2b6e15c561926bfbc36cd79bb5808d/shim.sock" debug=false module="containerd/tasks" pid=13715 
+time="2018-06-01T13:17:58+08:00" level=info msg="shim reaped" id=4138b598ad98f1117dd872f7c9276b6fac2b6e15c561926bfbc36cd79bb5808d module="containerd/tasks" 
+time="2018-06-01T13:17:58.674563964+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T13:19:35+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/95936235b2f776c274e5925b135222c42f3f52ef092fcaa339792f9efbfe7abc/shim.sock" debug=false module="containerd/tasks" pid=13925 
+time="2018-06-01T13:20:05+08:00" level=info msg="shim reaped" id=95936235b2f776c274e5925b135222c42f3f52ef092fcaa339792f9efbfe7abc module="containerd/tasks" 
+time="2018-06-01T13:20:05.753652130+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T13:20:06.540057770+08:00" level=info msg="Layer sha256:38dcc2d2d86ce63634ef7cba4a22c5e9b8d360d95adcd788deead1fca97a4c89 cleaned up"
+time="2018-06-01T13:24:48+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/2ea8aa4d689a32c53f35307bf07f79640371728a641dc12493c38a5ca8e9b5fd/shim.sock" debug=false module="containerd/tasks" pid=14303 
+time="2018-06-01T13:24:48+08:00" level=info msg="shim reaped" id=2ea8aa4d689a32c53f35307bf07f79640371728a641dc12493c38a5ca8e9b5fd module="containerd/tasks" 
+time="2018-06-01T13:24:48.876719525+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T13:24:48.876779707+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T13:24:48.921134911+08:00" level=error msg="2ea8aa4d689a32c53f35307bf07f79640371728a641dc12493c38a5ca8e9b5fd cleanup: failed to delete container from containerd: no such container"
+time="2018-06-01T13:25:41+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/69d4b208190c4848fbafe4f6bf4121cebf43b4ed1a81c11ed132ab08315a5b69/shim.sock" debug=false module="containerd/tasks" pid=14433 
+time="2018-06-01T13:25:42+08:00" level=info msg="shim reaped" id=69d4b208190c4848fbafe4f6bf4121cebf43b4ed1a81c11ed132ab08315a5b69 module="containerd/tasks" 
+time="2018-06-01T13:25:42.140726592+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T13:25:42.144807188+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T13:25:42.202453666+08:00" level=error msg="69d4b208190c4848fbafe4f6bf4121cebf43b4ed1a81c11ed132ab08315a5b69 cleanup: failed to delete container from containerd: no such container"
+time="2018-06-01T13:27:18+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/ac5c8305c6dd66925e47e3c69180c69573ccbd15090dfe50add98838479eed7f/shim.sock" debug=false module="containerd/tasks" pid=14556 
+time="2018-06-01T13:27:18+08:00" level=info msg="shim reaped" id=ac5c8305c6dd66925e47e3c69180c69573ccbd15090dfe50add98838479eed7f module="containerd/tasks" 
+time="2018-06-01T13:27:18.381350041+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T13:31:28.086473014+08:00" level=info msg="Pull session cancelled"
+time="2018-06-01T13:31:30.755748968+08:00" level=error msg="Not continuing with pull after error: context canceled"
+time="2018-06-01T13:31:43+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/af331889790ce8a0c0dc7f5b6602f04908233edd7cc74dbfcb712614d55dddd0/shim.sock" debug=false module="containerd/tasks" pid=14743 
+time="2018-06-01T13:31:49+08:00" level=info msg="shim reaped" id=af331889790ce8a0c0dc7f5b6602f04908233edd7cc74dbfcb712614d55dddd0 module="containerd/tasks" 
+time="2018-06-01T13:31:49.410930795+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T13:33:05+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/d32299b1964c7c21575d3df4398205e828d56cf6b5624aaa6b09ceb7d57e1d9c/shim.sock" debug=false module="containerd/tasks" pid=14897 
+time="2018-06-01T13:33:50+08:00" level=info msg="shim reaped" id=d32299b1964c7c21575d3df4398205e828d56cf6b5624aaa6b09ceb7d57e1d9c module="containerd/tasks" 
+time="2018-06-01T13:33:50.623142334+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T14:11:17.875342567+08:00" level=info msg="Pull session cancelled"
+time="2018-06-01T14:11:19.587494611+08:00" level=error msg="Not continuing with pull after error: context canceled"
+time="2018-06-01T14:11:23+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/e4d5e68911a3de4f921ddac199dc45ede4fcb4478ac9dbe3ea2b7c3221a2f182/shim.sock" debug=false module="containerd/tasks" pid=15261 
+time="2018-06-01T14:11:23+08:00" level=info msg="shim reaped" id=e4d5e68911a3de4f921ddac199dc45ede4fcb4478ac9dbe3ea2b7c3221a2f182 module="containerd/tasks" 
+time="2018-06-01T14:11:23.905286172+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T14:11:23.908762806+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T14:11:23.960823713+08:00" level=error msg="e4d5e68911a3de4f921ddac199dc45ede4fcb4478ac9dbe3ea2b7c3221a2f182 cleanup: failed to delete container from containerd: no such container"
+time="2018-06-01T14:11:51+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/7ae6a180803a0f8a995fd04fc353c363a5ff44fa42d3dd7449a5a27a5f6e5b2a/shim.sock" debug=false module="containerd/tasks" pid=15345 
+time="2018-06-01T14:11:54+08:00" level=info msg="shim reaped" id=7ae6a180803a0f8a995fd04fc353c363a5ff44fa42d3dd7449a5a27a5f6e5b2a module="containerd/tasks" 
+time="2018-06-01T14:11:54.759634918+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T14:12:13+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/e0db5f6980cc76cc08fe57f7d762a2141c1c38ce7f16c191839e0d5c7cd6695f/shim.sock" debug=false module="containerd/tasks" pid=15475 
+time="2018-06-01T14:12:59.860746647+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T14:12:59.862151356+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T14:12:59.875101599+08:00" level=error msg="Error running exec 61cb1895332c50de4e9d1f2070aabafae232924828eb100f224f5e30c7887781 in container: OCI runtime exec failed: exec failed: container_linux.go:348: starting container process caused \"exec: \\\"/bin/bash\\\": stat /bin/bash: no such file or directory\": unknown"
+time="2018-06-01T14:13:26.292755747+08:00" level=error msg="stream copy error: reading from a closed fifo"
+time="2018-06-01T14:13:26.304889716+08:00" level=error msg="Error running exec dd8820b0af3819ddcecb86e94cfe92c668d6bffdb0ca733df52c6166a052d558 in container: OCI runtime exec failed: exec failed: container_linux.go:348: starting container process caused \"exec: \\\"/bin/bash\\\": stat /bin/bash: no such file or directory\": unknown"
+time="2018-06-01T14:16:12.291612971+08:00" level=info msg="Attempting next endpoint for pull after error: manifest unknown: manifest unknown"
+time="2018-06-01T14:16:20.037565079+08:00" level=info msg="Attempting next endpoint for pull after error: manifest unknown: manifest unknown"
+time="2018-06-01T14:16:32.302465430+08:00" level=info msg="Attempting next endpoint for pull after error: manifest unknown: manifest unknown"
+time="2018-06-01T15:01:52+08:00" level=info msg="shim reaped" id=1e6c03a1c8c3f1d0f0ff52101b02f92a4d127d069d5f3d92e36a9037f2688c19 module="containerd/tasks" 
+time="2018-06-01T15:01:52.319811190+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:01:54+08:00" level=info msg="shim reaped" id=002d63e667e882315253cce11733cfc53e08e4eeb6e5e6fd4586c6e67b1edf20 module="containerd/tasks" 
+time="2018-06-01T15:01:54.290706162+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:02:36+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/6e79e5749b1d72b48c8cda980bb9c37888a269a5921745e57888ba79d1b505c2/shim.sock" debug=false module="containerd/tasks" pid=16167 
+time="2018-06-01T15:02:36+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/afb053a2e497c40abc0c0325e197658843610104dc76e4682186d33672683371/shim.sock" debug=false module="containerd/tasks" pid=16278 
+time="2018-06-01T15:02:37+08:00" level=info msg="shim reaped" id=afb053a2e497c40abc0c0325e197658843610104dc76e4682186d33672683371 module="containerd/tasks" 
+time="2018-06-01T15:02:37.221906214+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:03:12+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/afb053a2e497c40abc0c0325e197658843610104dc76e4682186d33672683371/shim.sock" debug=false module="containerd/tasks" pid=16440 
+time="2018-06-01T15:03:36.966733671+08:00" level=info msg="Container afb053a2e497c40abc0c0325e197658843610104dc76e4682186d33672683371 failed to exit within 10 seconds of signal 15 - using the force"
+time="2018-06-01T15:03:37+08:00" level=info msg="shim reaped" id=afb053a2e497c40abc0c0325e197658843610104dc76e4682186d33672683371 module="containerd/tasks" 
+time="2018-06-01T15:03:37.031393011+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:03:43+08:00" level=info msg="shim reaped" id=6e79e5749b1d72b48c8cda980bb9c37888a269a5921745e57888ba79d1b505c2 module="containerd/tasks" 
+time="2018-06-01T15:03:43.519410998+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:03:56+08:00" level=info msg="shim reaped" id=e0db5f6980cc76cc08fe57f7d762a2141c1c38ce7f16c191839e0d5c7cd6695f module="containerd/tasks" 
+time="2018-06-01T15:03:56.165636469+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:05:26.273336594+08:00" level=info msg="Layer sha256:22aba4934f6c62d9ca1e44af705fc78cffb23ad52ee010b5d9b151ecac9ac00b cleaned up"
+time="2018-06-01T15:05:26+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/575e4425f299c234da54f544ddb2ad9f96c117e5c91cae9454ecc5278899d569/shim.sock" debug=false module="containerd/tasks" pid=16797 
+time="2018-06-01T15:06:59+08:00" level=info msg="shim reaped" id=575e4425f299c234da54f544ddb2ad9f96c117e5c91cae9454ecc5278899d569 module="containerd/tasks" 
+time="2018-06-01T15:06:59.059152963+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:07:00.248745871+08:00" level=info msg="Layer sha256:363e9090c3094d9aaac524cbd8a9452a45b50ced142845ef2b99728a0e13600a cleaned up"
+time="2018-06-01T15:16:04+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/f66f7058bfa165b90365219fbf5c49317d1f3c618274d1e91ad00e7c4d91a5dc/shim.sock" debug=false module="containerd/tasks" pid=17330 
+time="2018-06-01T15:16:04+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/43a92b6be71e14dfcb4903503359525c91b8a73f7ec6f3ab3e5b4403ce92e9c8/shim.sock" debug=false module="containerd/tasks" pid=17401 
+time="2018-06-01T15:16:05+08:00" level=info msg="shim reaped" id=43a92b6be71e14dfcb4903503359525c91b8a73f7ec6f3ab3e5b4403ce92e9c8 module="containerd/tasks" 
+time="2018-06-01T15:16:05.288395804+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:16:05+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/789a92f6e19dccc175c1dbd461ddb340cecd5dd9acbb5c5483403bf3013c56ef/shim.sock" debug=false module="containerd/tasks" pid=17634 
+time="2018-06-01T15:16:05+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/baeb0a25e018fb811f3bbbea46dfea1e552bfbff61d857e99ee7d2e5d9d53086/shim.sock" debug=false module="containerd/tasks" pid=17635 
+time="2018-06-01T15:16:05+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/e2f75a845d7be3cbee3cbbfea9eb81feb33124dfb38a555bbc661719fbac4e33/shim.sock" debug=false module="containerd/tasks" pid=17682 
+time="2018-06-01T15:16:07+08:00" level=info msg="shim reaped" id=baeb0a25e018fb811f3bbbea46dfea1e552bfbff61d857e99ee7d2e5d9d53086 module="containerd/tasks" 
+time="2018-06-01T15:16:07.373763496+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:16:07+08:00" level=info msg="shim reaped" id=e2f75a845d7be3cbee3cbbfea9eb81feb33124dfb38a555bbc661719fbac4e33 module="containerd/tasks" 
+time="2018-06-01T15:16:07.460326256+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:16:08+08:00" level=info msg="shim reaped" id=789a92f6e19dccc175c1dbd461ddb340cecd5dd9acbb5c5483403bf3013c56ef module="containerd/tasks" 
+time="2018-06-01T15:16:08.026542067+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:16:26+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/e2f75a845d7be3cbee3cbbfea9eb81feb33124dfb38a555bbc661719fbac4e33/shim.sock" debug=false module="containerd/tasks" pid=18112 
+time="2018-06-01T15:16:34+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/baeb0a25e018fb811f3bbbea46dfea1e552bfbff61d857e99ee7d2e5d9d53086/shim.sock" debug=false module="containerd/tasks" pid=18207 
+time="2018-06-01T15:16:39+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/789a92f6e19dccc175c1dbd461ddb340cecd5dd9acbb5c5483403bf3013c56ef/shim.sock" debug=false module="containerd/tasks" pid=18294 
+time="2018-06-01T15:16:48+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/43a92b6be71e14dfcb4903503359525c91b8a73f7ec6f3ab3e5b4403ce92e9c8/shim.sock" debug=false module="containerd/tasks" pid=18433 
+time="2018-06-01T15:16:48+08:00" level=info msg="shim reaped" id=43a92b6be71e14dfcb4903503359525c91b8a73f7ec6f3ab3e5b4403ce92e9c8 module="containerd/tasks" 
+time="2018-06-01T15:16:48.281488053+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:23:46+08:00" level=info msg="shim reaped" id=f66f7058bfa165b90365219fbf5c49317d1f3c618274d1e91ad00e7c4d91a5dc module="containerd/tasks" 
+time="2018-06-01T15:23:46+08:00" level=info msg="shim reaped" id=e2f75a845d7be3cbee3cbbfea9eb81feb33124dfb38a555bbc661719fbac4e33 module="containerd/tasks" 
+time="2018-06-01T15:23:46+08:00" level=info msg="shim reaped" id=789a92f6e19dccc175c1dbd461ddb340cecd5dd9acbb5c5483403bf3013c56ef module="containerd/tasks" 
+time="2018-06-01T15:23:46+08:00" level=info msg="shim reaped" id=baeb0a25e018fb811f3bbbea46dfea1e552bfbff61d857e99ee7d2e5d9d53086 module="containerd/tasks" 
+time="2018-06-01T15:23:46.707324151+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:23:46.709657443+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:23:46.716439617+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:23:46.716466199+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:24:46+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/a896878bfd0807871513aafc310821dea2bd7290cba9d6e9838c75afac87b358/shim.sock" debug=false module="containerd/tasks" pid=18900 
+time="2018-06-01T15:24:46+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/8017073601b7cac79adc6ef6f9f2d7ce3482fcc6e865624cf2ae380974b1220d/shim.sock" debug=false module="containerd/tasks" pid=19014 
+time="2018-06-01T15:24:47+08:00" level=info msg="shim reaped" id=8017073601b7cac79adc6ef6f9f2d7ce3482fcc6e865624cf2ae380974b1220d module="containerd/tasks" 
+time="2018-06-01T15:24:47.100704380+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:24:47+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/e54f39a8a7a05892d513107ca366deced9d0ec14bfb69ce94733d85a0afe1170/shim.sock" debug=false module="containerd/tasks" pid=19234 
+time="2018-06-01T15:24:47+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/cf0d369fc4f6cf2993dbedba62be119d3550b1a67a33cdeedb16717ce1b7a6fd/shim.sock" debug=false module="containerd/tasks" pid=19293 
+time="2018-06-01T15:24:47+08:00" level=info msg="shim docker-containerd-shim started" address="/containerd-shim/moby/d69f7dc817b7f0f004b2550d88c40f80f28a04ad87f5304326f9763cbd64b24d/shim.sock" debug=false module="containerd/tasks" pid=19366 
+time="2018-06-01T15:24:54+08:00" level=info msg="shim reaped" id=cf0d369fc4f6cf2993dbedba62be119d3550b1a67a33cdeedb16717ce1b7a6fd module="containerd/tasks" 
+time="2018-06-01T15:24:54+08:00" level=info msg="shim reaped" id=e54f39a8a7a05892d513107ca366deced9d0ec14bfb69ce94733d85a0afe1170 module="containerd/tasks" 
+time="2018-06-01T15:24:54+08:00" level=info msg="shim reaped" id=a896878bfd0807871513aafc310821dea2bd7290cba9d6e9838c75afac87b358 module="containerd/tasks" 
+time="2018-06-01T15:24:54+08:00" level=info msg="shim reaped" id=d69f7dc817b7f0f004b2550d88c40f80f28a04ad87f5304326f9763cbd64b24d module="containerd/tasks" 
+time="2018-06-01T15:24:54.671603677+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:24:54.674395767+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:24:54.675300089+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+time="2018-06-01T15:24:54.679126108+08:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
