@@ -15,7 +15,6 @@ services:
     image: "gzq_web"
     volumes:
      - ../1/src:/code #尽量不要让src不能跟code同名，有奇葩的bug
-    command: ["./wait-for-it.sh", "db:5432", "--", "python3", "server.py"]
     #links: 即将被淘汰，换成networks
     # - db
     networks:
@@ -34,7 +33,6 @@ services:
     image: "gzq_web"
     volumes:
      - ../1/src:/code
-    command: ["./wait-for-it.sh", "db:5432", "--", "python3", "server.py"]
     networks:
       web_2:
         aliases:
@@ -51,7 +49,6 @@ services:
     image: "gzq_web"
     volumes:
      - ../1/src:/code
-    command: ["./wait-for-it.sh", "db:5432", "--", "python3", "server.py"]
     networks:
       web_3:
         aliases:
@@ -66,10 +63,14 @@ services:
         max-file: "10"
   nginx:
     image: "nginx:alpine"
-    networks:  
-     - web_1  
-     - web_2  
-     - web_3  
+    networks:
+     - web_1
+     - web_2
+     - web_3
+    depends_on:
+     - web1
+     - web2
+     - web3
     ports:  
      - "13017:80"
     volumes:
