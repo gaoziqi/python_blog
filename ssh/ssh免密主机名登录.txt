@@ -1,0 +1,12 @@
+本地机：
+ssh-keygen -t rsa
+cd ~/.ssh
+ssh-copy-id -p [port] [user]@[ip]	//免密完成
+
+
+vim ~/.ssh/config			//主机名登录
+
+Host [主机名]
+HostName [ip]
+Port [port]
+User [user]

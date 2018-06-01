@@ -1,19 +1,33 @@
 version: '3'
 services:
-  db:
+  postgres:
     image: "postgres:10.1"
     volumes:
      - ../data:/var/lib/postgresql/data
     environment:    #设置环境变量
      - POSTGRES_PASSWORD=postgres
      - POSTGRES_USER=postgres
+    networks:
+      new:
+        aliases:
+          - db
   web:
     build: ../src
     ports:
      - "13017:13017"
     volumes:
      - ../src:/code #尽量不要让src不能跟code同名，有奇葩的bug
-    links:
-     - db
+    #links: 即将被淘汰，换成networks
+    # - db
+    networks:
+      - new
     depends_on:
-     - db
+     - postgres
+    logging:
+      driver: json-file
+      options:
+        max-size: "200k"    #最大日志大小
+        max-file: "10"      #最大日志数量
+
+networks:
+  new:
