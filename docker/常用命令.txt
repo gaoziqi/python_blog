@@ -14,7 +14,7 @@ docker logs 	[容器名]		#查看容器日志， 清理日志cat /dev/null >/var/lib/docker/co
 docker rm     	[容器名]		#删除容器
 
 
-docker exec -it [容器名] /bin/bash	#进入容器（进入后env查看局部变量）
+docker exec -it [容器名] /bin/bash	#进入容器（进入后env查看局部变量）alpine是/bin/sh
 
 sudo docker ps -a|grep Exited|awk '{print $1}'	#删除所有停止容器
 

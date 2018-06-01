@@ -1,0 +1,79 @@
+version: '3'
+services:
+  postgres:
+    image: "postgres:10.1"
+    volumes:
+     - ./data:/var/lib/postgresql/data
+    environment:    #设置环境变量
+     - POSTGRES_PASSWORD=postgres
+     - POSTGRES_USER=postgres
+    networks:
+      new:
+        aliases:
+          - db
+  web1:
+    image: "gzq_web"
+    volumes:
+     - ../1/src:/code #尽量不要让src不能跟code同名，有奇葩的bug
+    #links: 即将被淘汰，换成networks
+    # - db
+    networks:
+      - new
+      web_1:
+        aliases:
+          - host1
+    depends_on:
+     - postgres
+    logging:
+      driver: json-file
+      options:
+        max-size: "200k"    #最大日志大小
+        max-file: "10"      #最大日志数量
+  web2:
+    image: "gzq_web"
+    volumes:
+     - ../1/src:/code
+    networks:
+      - new
+      web_2:
+        aliases:
+          - host2
+    depends_on:
+     - postgres
+    logging:
+      driver: json-file
+      options:
+        max-size: "200k"
+        max-file: "10"
+  web3:
+    image: "gzq_web"
+    volumes:
+     - ../1/src:/code
+    networks:
+      - new
+      web_3:
+        aliases:
+          - host3
+    depends_on:
+     - postgres
+    logging:
+      driver: json-file
+      options:
+        max-size: "200k"
+        max-file: "10"
+  nginx:
+    image: "nginx:alpine"
+    networks:  
+     - host1  
+     - host2  
+     - host3  
+    ports:  
+     - "13017:80"
+    volumes:
+     - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+
+networks:
+  new:
+  web_1:
+  web_2:
+  web_3:
