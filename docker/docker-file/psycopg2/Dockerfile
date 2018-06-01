@@ -11,4 +11,4 @@ RUN echo "http://mirrors.ustc.edu.cn/alpine/v3.7/main/" > /etc/apk/repositories 
     pip3 install -r requirements.txt && \
     apk del build-deps gcc musl-dev
 
-ENTRYPOINT ["python3"]
+CMD ["python3"]
