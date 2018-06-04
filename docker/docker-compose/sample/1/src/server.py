@@ -26,6 +26,21 @@ class SetHandler(tornado.web.RequestHandler):
         self.application.conn.commit()
         self.write('完成')
 
+class CodeHandler(tornado.web.RequestHandler):
+
+    def get(self):
+        filename = 'server.py'
+        self.set_header("Content-Type", 'application/octet-stream')
+        self.set_header("Content-Disposition", "%s%s" % ("attachment; filename=", filename))
+        buffer_size = 4096
+        with open('/code/%s' % filename, 'rb') as r:
+            while True:
+                data = r.read(buffer_size)
+                if not data:
+                    break
+                self.write(data)
+        self.finish()
+
 
 class MainHandler(tornado.web.RequestHandler):
 
@@ -39,6 +54,7 @@ class Application(tornado.web.Application):
         handlers = [
             (r'/get', GetHandler),
             (r'/set', SetHandler),
+            (r'/code', CodeHandler),
             (r'/', MainHandler)
         ]
         settings = {} #'static_path', 'static_url_prefix'

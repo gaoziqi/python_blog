@@ -18,10 +18,10 @@ services:
     #links: 即将被淘汰，换成networks
     # - db
     networks:
-      front:
-        aliases:
+      front:          #子网名，并连接到子网
+        aliases:      #子网中ip别名
           - host1
-      backend:
+      backend:        #连接到子网
     depends_on:
      - postgres
     logging:
@@ -64,7 +64,7 @@ services:
   nginx:
     image: "nginx:alpine"
     networks:
-     - front
+     - front    #连接到子网，不能跟：模式混用
     depends_on:
      - web1
      - web2
