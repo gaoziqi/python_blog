@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e
 
 echo "
 wal_level = hot_standby
@@ -9,12 +8,14 @@ hot_standby = on
 logging_collector = on
 log_directory = 'pg_log'
 log_filename = 'postgresql-%Y-%m-%d_%H%M%S.log'" >> "$PGDATA/postgresql.conf"
+
 echo "master: update postgresql.conf"
 
 
 echo "
 host    replication     replica     slave1/32                 md5
 host    replication     replica     slave2/32                 md5" >> "$PGDATA/pg_hba.conf"
+
 echo "master: pg_hba.conf.conf"
 
 
