@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -Eeo pipefail
+set -e
 
 echo "
 wal_level = hot_standby
