@@ -3,7 +3,7 @@
 echo "
 wal_level = hot_standby
 max_wal_senders = 1    #有几个备库就设置为几
-wal_keep_segments = 256    #设置一个足够大的值，以防主库生成WAL日志太快，日志还没有来得及传送到standby，就会循环覆盖\n\
+wal_keep_segments = 256    #设置一个足够大的值，以防主库生成WAL日志太快，日志还没有来得及传送到standby，就会循环覆盖
 hot_standby = on
 logging_collector = on
 log_directory = 'pg_log'
