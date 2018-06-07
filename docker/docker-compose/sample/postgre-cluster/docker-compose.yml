@@ -1,0 +1,42 @@
+version: '3'
+services:
+  master:
+    image: "postgres:10.1"
+    volumes:
+     - ./data/master:/var/lib/postgresql/data
+    environment:    #设置环境变量
+     - POSTGRES_PASSWORD=postgres
+     - POSTGRES_USER=postgres
+    networks:
+      backend:
+        aliases:
+          - master
+  slave1:
+    image: "postgres:10.1"
+    volumes:
+     - ./data/slave1:/var/lib/postgresql/data
+    environment:    #设置环境变量
+     - POSTGRES_PASSWORD=postgres
+     - POSTGRES_USER=postgres
+    networks:
+      backend:          #子网名，并连接到子网
+        aliases:        #子网中ip别名
+          - slave1
+    depends_on:
+     - master
+  slave2:
+    image: "postgres:10.1"
+    volumes:
+     - ./data/slave2:/var/lib/postgresql/data
+    environment:    #设置环境变量
+     - POSTGRES_PASSWORD=postgres
+     - POSTGRES_USER=postgres
+    networks:
+      backend:          #子网名，并连接到子网
+        aliases:        #子网中ip别名
+          - slave2
+    depends_on:
+     - master
+
+networks:
+  backend:

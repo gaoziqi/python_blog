@@ -31,3 +31,4 @@ docker-compose
 docker-compose up			#执行yaml
 docker-compose up -d			#后台执行yaml
 docker-compose up -d --build		#修改Dockfile后，重新生成并执行yaml
+docker-compose down			#关闭yaml的所有容器
