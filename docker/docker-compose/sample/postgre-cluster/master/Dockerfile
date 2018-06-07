@@ -1,7 +1,7 @@
 FROM postgres:10.1
 WORKDIR /
-ENV POSTGRES_PASSWORD
-ENV POSTGRES_USER
+ENV POSTGRES_PASSWORD postgres
+ENV POSTGRES_USER postgres
 
 RUN docker-entrypoint.sh postgres
 
