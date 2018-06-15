@@ -1,0 +1,2 @@
+官网下载最新airkiss.h libairkiss.a
+更新到/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr
