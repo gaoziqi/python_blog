@@ -16,7 +16,7 @@ class GetHandler(tornado.web.RequestHandler):
 class SetHandler(tornado.web.RequestHandler):
 
     def post(self):
-        data = json.loads(self.request,body)
+        data = json.loads(self.request.body)
         key, value = data['key'], data['value']
         #key = self.get_argument('key')
         #value = self.get_argument('value')
