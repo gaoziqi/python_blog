@@ -7,7 +7,7 @@ class GetHandler(tornado.web.RequestHandler):
 
     def get(self):
         key = self.get_argument('key')
-        self.application.cu.execute(f'SELECT v FROM test WHERE k = {key}')
+        self.application.cu.execute(f'SELECT v FROM teststr WHERE k = {key}')
         res = self.application.cu.fetchone()
         self.write(str(res[0]) if res else '不存在')
 
@@ -17,12 +17,12 @@ class SetHandler(tornado.web.RequestHandler):
     def post(self):
         key = self.get_argument('key')
         value = self.get_argument('value')
-        self.application.cu.execute(f'SELECT v FROM test WHERE k = {key}')
+        self.application.cu.execute(f'SELECT v FROM teststr WHERE k = {key}')
         res = self.application.cu.fetchone()
         if res:
-            self.application.cu.execute(f'UPDATE test SET v = {value} WHERE k = {key}')
+            self.application.cu.execute(f'UPDATE teststr SET v = {value} WHERE k = {key}')
         else:
-            self.application.cu.execute(f'INSERT INTO test VALUES ({key}, {value})')
+            self.application.cu.execute(f'INSERT INTO teststr VALUES ({key}, {value})')
         self.application.conn.commit()
         self.write('完成')
 
@@ -60,7 +60,7 @@ class Application(tornado.web.Application):
         settings = {} #'static_path', 'static_url_prefix'
         self.conn = psycopg2.connect(database='postgres', user='postgres', password='postgres', host='db', port='5432')
         self.cu = self.conn.cursor()
-        self.cu.execute("CREATE TABLE IF NOT EXISTS test(k INT PRIMARY KEY, v INT);")
+        self.cu.execute("CREATE TABLE IF NOT EXISTS teststr(k INT PRIMARY KEY, v text);")
         self.conn.commit()
         tornado.web.Application.__init__(self, handlers, debug = True, **settings)
 
