@@ -14,7 +14,7 @@ class GetHandler(tornado.web.RequestHandler):
 
 class SetHandler(tornado.web.RequestHandler):
 
-    def get(self):
+    def post(self):
         key = self.get_argument('key')
         value = self.get_argument('value')
         self.application.cu.execute(f'SELECT v FROM test WHERE k = {key}')
