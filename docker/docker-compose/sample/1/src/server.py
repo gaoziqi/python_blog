@@ -1,6 +1,7 @@
 import tornado.ioloop
 import tornado.web
 import psycopg2
+import json
 from tornado.options import parse_command_line
 
 class GetHandler(tornado.web.RequestHandler):
@@ -15,8 +16,10 @@ class GetHandler(tornado.web.RequestHandler):
 class SetHandler(tornado.web.RequestHandler):
 
     def post(self):
-        key = self.get_argument('key')
-        value = self.get_argument('value')
+        data = json.loads(self.request,body)
+        key, value = data['key'], data['value']
+        #key = self.get_argument('key')
+        #value = self.get_argument('value')
         self.application.cu.execute(f'SELECT v FROM teststr WHERE k = {key}')
         res = self.application.cu.fetchone()
         if res:
