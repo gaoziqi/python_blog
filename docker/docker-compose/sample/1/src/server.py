@@ -20,9 +20,9 @@ class SetHandler(tornado.web.RequestHandler):
         self.application.cu.execute(f'SELECT v FROM teststr WHERE k = {key}')
         res = self.application.cu.fetchone()
         if res:
-            self.application.cu.execute(f'UPDATE teststr SET v = {value} WHERE k = {key}')
+            self.application.cu.execute(f"UPDATE teststr SET v = '{value}' WHERE k = {key}")
         else:
-            self.application.cu.execute(f'INSERT INTO teststr VALUES ({key}, {value})')
+            self.application.cu.execute(f"INSERT INTO teststr VALUES ({key}, '{value}')")
         self.application.conn.commit()
         self.write('完成')
 
