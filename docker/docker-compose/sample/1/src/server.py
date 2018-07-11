@@ -27,7 +27,7 @@ class SetHandler(tornado.web.RequestHandler):
         else:
             self.application.cu.execute(f"INSERT INTO teststr VALUES ({key}, '{value}')")
         self.application.conn.commit()
-        self.write('完成')
+        self.write('success')
 
 class CodeHandler(tornado.web.RequestHandler):
 
