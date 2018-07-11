@@ -15,7 +15,7 @@ def on_message(client, userdata, msg):
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
-
+client.username_pw_set("admin", "admin")
 client.connect("172.16.10.24", 1883, 60)
 
 # Blocking call that processes network traffic, dispatches callbacks and
