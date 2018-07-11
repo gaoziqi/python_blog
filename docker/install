@@ -1,2 +1,4 @@
 curl -fsSL get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
+curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://ef017c13.m.daocloud.io
+systemctl restart docker
