@@ -1,0 +1,2 @@
+sudo rdate -s time-b.nist.gov
+sudo hwclock -w
