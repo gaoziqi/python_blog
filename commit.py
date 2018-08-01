@@ -78,6 +78,7 @@ if __name__ == '__main__':
         os.chdir('../qs_yun')
         git_commit()
     elif commit:
+        git_pull()
         git_commit()
     else:
         if force:
