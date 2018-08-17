@@ -7,27 +7,12 @@ import os
 import time
 import getopt
 import sys
-import pexpect
 
 SSH_NEWKEY = r'Are you sure you want to continue connecting \(yes/no\)\?'
 
 
 def auto_run(cmd, passwd='tdq$abc123'):
     os.system(cmd)
-    return
-    child = pexpect.spawn(cmd)
-    child.logfile_read = sys.stdout.buffer
-    i = child.expect([pexpect.TIMEOUT, SSH_NEWKEY, '[Pp]assword: '])
-    if i == 0:  # Timeout
-        print('ERROR!')
-        print('SSH could not login. Here is what SSH said:')
-        print(child.before, child.after)
-        sys.exit(1)
-    if i == 1:  # SSH does not have the public key. Just accept it.
-        child.sendline('yes')
-        child.expect('[Pp]assword: ')
-    child.sendline(passwd)
-    child.expect(pexpect.EOF)
 
 
 def git_pull():
