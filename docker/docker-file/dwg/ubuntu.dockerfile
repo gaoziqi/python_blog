@@ -1,6 +1,6 @@
 FROM debian:9.6
 
-WORKDIR /app
+WORKDIR /data
 COPY ODAFileConverter_QT5_lnxX64_4.7dll.deb .
 
 RUN echo "deb http://mirrors.aliyun.com/debian stretch main contrib non-free\n\
@@ -13,6 +13,7 @@ RUN echo "deb http://mirrors.aliyun.com/debian stretch main contrib non-free\n\
   && apt update \
   && apt install -y --no-install-recommends libqt5widgets5 \
   && dpkg -i ODAFileConverter_QT5_lnxX64_4.7dll.deb \
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/* \
+  && rm ODAFileConverter_QT5_lnxX64_4.7dll.deb
 
 CMD ["/bin/bash"]
