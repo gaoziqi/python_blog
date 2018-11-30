@@ -12,6 +12,7 @@ RUN echo "deb http://mirrors.aliyun.com/debian stretch main contrib non-free\n\
   /etc/apt/sources.list \
   && apt update \
   && apt install -y --no-install-recommends libqt5widgets5 \
-  && dpkg -i ODAFileConverter_QT5_lnxX64_4.7dll.deb
+  && dpkg -i ODAFileConverter_QT5_lnxX64_4.7dll.deb \
+  && rm -rf /var/lib/apt/lists/*
 
 CMD ["/bin/bash"]
