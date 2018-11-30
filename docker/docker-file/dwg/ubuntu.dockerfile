@@ -3,7 +3,7 @@ FROM debian:9.6
 WORKDIR /app
 COPY ODAFileConverter_QT5_lnxX64_4.7dll.deb .
 
-RUN echo -e "deb http://mirrors.aliyun.com/debian stretch main contrib non-free\n\
+RUN echo "deb http://mirrors.aliyun.com/debian stretch main contrib non-free\n\
   deb-src http://mirrors.aliyun.com/debian stretch main contrib non-free\n\
   deb http://mirrors.aliyun.com/debian stretch-updates main contrib non-free\n\
   deb-src http://mirrors.aliyun.com/debian stretch-updates main contrib non-free\n\
