@@ -1,1 +1,1 @@
-docker build -f ubuntu.dockerfile -t dwg .
+docker build -f ubuntu.dockerfile -t dwg ~
