@@ -1,1 +1,1 @@
-docker build -f ubuntu.dockerfile -t dwg ~
+docker build --no-cache --rm -f ubuntu.dockerfile -t dwg .
