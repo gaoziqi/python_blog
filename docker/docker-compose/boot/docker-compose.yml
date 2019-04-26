@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  db:
+    image: mdillon/postgis:11-alpine
+    volumes:
+     - /home/postgres/data:/var/lib/postgresql/data
+    environment:    #设置环境变量
+     - POSTGRES_PASSWORD=gaoziqi2
+     - POSTGRES_USER=gzq
+    ports:  
+     - "5432:5432"
+    networks:
+      backend:
+        aliases:
+          - db
+  git:
+    image: gogs/gogs:latest
+    volumes:
+     - /home/gzq/data/gogs:/data
+    ports:
+     - "22:22"
+     - "80:3000"
+    depends_on:
+     - db
+    networks:
+     - backend
+
+networks:
+  backend:
